@@ -3,36 +3,17 @@ class SpotifyNotifier < Formula
   homepage "https://github.com/Chaitanya-Shahare/spotify-notifier"
   url "https://github.com/Chaitanya-Shahare/spotify-notifier/archive/v1.0.0.tar.gz"
   sha256 "f7959bcfc6ad13de7786c8d871a129901d786f39d2076060716394e89a71773a"
+  head "https://github.com/Chaitanya-Shahare/spotify-notifier.git"
 
-  depends_on "terminal-notifier" # Add any dependencies here
+  depends_on "terminal-notifier"
 
   def install
-    bin.install "spotify-notifier.sh"
+    bin.install "spotify-notifier.sh" => "spotify-notifier"
   end
 
-  plist_options :startup => true
-
-  def plist; <<-EOS
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-      <key>Label</key>
-      <string>homebrew.mxcl.spotify-notifier</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>/usr/local/bin/spotify-notifier.sh</string>
-      </array>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>KeepAlive</key>
-      <true/>
-    </dict>
-    </plist>
-    EOS
-  end
-
-  test do
-    # Add some test cases if necessary
+  service do
+    run [opt_bin/"spotify-notifier"]
+    keep_alive true
+    run_type :immediate
   end
 end
