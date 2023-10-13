@@ -2,7 +2,7 @@ class SpotifyNotifier < Formula
   desc "A script that sends notifications for Spotify song changes."
   homepage "https://github.com/Chaitanya-Shahare/spotify-notifier"
   url "https://github.com/Chaitanya-Shahare/spotify-notifier/archive/v1.0.0.tar.gz"
-  sha256 "09a901d0025d313c0ee0915db9dd0ae3b81a61985e0128d0dbe14a744f41fbc6"
+  sha256 "f7959bcfc6ad13de7786c8d871a129901d786f39d2076060716394e89a71773a"
 
   depends_on "terminal-notifier" # Add any dependencies here
 
