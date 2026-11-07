@@ -1,6 +1,6 @@
 cask "desklight" do
-  version "0.2.0"
-  sha256 "afb7756c98684ca183c13c2667a351f933691daf3452894d646ae56bab7f1f82"
+  version "0.3.0"
+  sha256 "c906e432b836116e325e381f40846d0dc902aebc472589bc40c9cd4d40772d72"
 
   url "https://github.com/Chaitanya-Shahare/desklight/releases/download/v#{version}/DeskLight-#{version}.zip"
   name "DeskLight"
