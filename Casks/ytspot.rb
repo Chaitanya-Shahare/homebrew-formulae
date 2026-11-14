@@ -1,6 +1,6 @@
 cask "ytspot" do
-  version "0.13.0"
-  sha256 "577896a07dee51e10406162bc5b0657e59d0e34075dd9a68081742fa73682734"
+  version "0.14.0"
+  sha256 "4ff5c7d7fc2c5312f6816dfaca08fe260f708ca0934f37e40128d00725717a65"
 
   url "https://github.com/Chaitanya-Shahare/ytspot/releases/download/v#{version}/ytspot-mac-arm64.zip"
   name "ytspot"
